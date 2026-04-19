@@ -1,34 +1,34 @@
 html,
-body {
-  margin: 0;
+body { /* by default the browser has its own margins - this body resets the margins */ 
+  margin: 0;  
   padding: 0;
 }
 
-.main-header {
+.main-header { /* This targets any container with the "main-header" class and changes the color & adds space below the content */
   background-color: rgba(0, 0, 0, 0.3);
   padding-bottom: 10px;
 }
 
-.title {
-  text-align: center;
-  margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
-  font-weight: normal;
-  color: white;
+.title { /* This targets any container with the "title" class, and changes anything cosmetic */
+  text-align: center; /* where its aligned in the browser */
+  margin: 0; /* how its spaced out */
+  font-size: 8em; /* em means 8x larger than normal font */ 
+  font-family: "Helvetica"; /* font */
+  font-weight: normal; /* bold/italisized/normal */
+  color: white; /* color */
 }
 
-#card-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
+#card-container { /* targets the card-container ID */
+  display: flex; /* makes the cards vertical */
+  justify-content: center; /* centers the cards */
+  margin: 20px; /* space between the cards */
 }
 
-.card {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.card { /* the card border */
+  width: 300px; /* */
+  border: 1px solid #ccc; /* thin light-gray border */
+  border-radius: 5px; /* rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle drop shadow*/
   margin: 5px;
 }
 
@@ -44,27 +44,27 @@ body {
 }
 
 .card img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* image fills the card entirely */
+  height: auto; /* maintains same aspect ratio */
 }
 
-.footer {
+.footer { /* bottom of the web page (mirrors the header) */
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
 }
 
-button {
+button { /* <button> cosmetics */
   text-align: center;
-  background-color: #666;
+  background-color: #666; /* color */
   border: none;
   padding-left: 10px;
   padding-right: 10px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 10px; /* pill shaped */
   color: white;
   font-size: 22px;
-  cursor: pointer;
+  cursor: pointer; /* shows hand cursor when hovering */
   margin: 5px;
 }
