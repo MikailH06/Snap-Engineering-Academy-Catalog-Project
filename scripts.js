@@ -28,7 +28,7 @@ const FRESH_PRINCE_URL =
 const CURB_POSTER_URL =
   "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
 const EAST_LOS_HIGH_POSTER_URL =
-  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg"; // stores image URLs
 
 // This is an array of strings (TV show titles)
 let titles = [
@@ -41,15 +41,16 @@ let titles = [
 
 // This function adds cards the page to display the data in the array
 function showCards() {
-  const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = "";
-  const templateCard = document.querySelector(".card");
+  const cardContainer = document.getElementById("card-container"); //searches through the HTML converts the (card-container) to JS (cardContainer)
+  cardContainer.innerHTML = ""; //resets the function everytime its called
+  const templateCard = document.querySelector(".card"); //needed for CSS file cosmetics
 
   for (let i = 0; i < titles.length; i++) {
     let title = titles[i];
 
     // This part of the code doesn't scale very well! After you add your
     // own data, you'll need to do something totally different here.
+    //NOTE: better to store object in the array with the title and image
     let imageURL = "";
     if (i == 0) {
       imageURL = FRESH_PRINCE_URL;
@@ -65,29 +66,29 @@ function showCards() {
   }
 }
 
-function editCardContent(card, newTitle, newImageURL) {
-  card.style.display = "block";
+function editCardContent(card, newTitle, newImageURL) { //Modifys the card's content
+  card.style.display = "block"; // overrides the Display: NONE, making the card visible
 
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
+  const cardHeader = card.querySelector("h2"); //finds the h2 class in html
+  cardHeader.textContent = newTitle; //sets the h2 class
 
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
+  const cardImage = card.querySelector("img"); //finds the img class in html
+  cardImage.src = newImageURL; // sets the actual image
+  cardImage.alt = newTitle + " Poster"; //just in case the image fails to load
 
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
   // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
+  console.log("new card:", newTitle, "- html: ", card); //error message
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", showCards); // ESSENTIAL to call showcards
 
 function quoteAlert() {
   console.log("Button Clicked!");
   alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!",
+    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!", // alert is a browser function that pops up when the main function is called
   );
 }
 
