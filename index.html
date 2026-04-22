@@ -1,31 +1,36 @@
-<!doctype html> //similar to a file header - tells program this is a HTML5 file
-<html> //core function - everything lives inside this main container
-  <head> // sets browser tab text(opens container)
-    <title>LA TV Shows | Home</title> //METADATA(not shown on website)
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" /> //METADATA(not shown on website)
-    <link rel="stylesheet" href="style.css" /> //Include statement for CSS file
-    <script type="text/javascript" src="scripts.js"></script> //Include statement for JS file - placed in head, so that it loads before the page renders
-  </head> // closes head container
+<!doctype html>
+<html>
+  <head>
+    <title>Colognes | Home</title>
+    <meta name="description" content="A Catalog of different types of Colognes" />
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="scripts.js"></script>
+  </head>
 
-  <body> //what is actually seen on the website
-    <header class="main-header"> // header connects to the styling rules in CSS
-      <h1 class="title">LA TV Shows</h1> //Diplay Title on the website 
+  <body>
+    <header class="main-header">
+      <h1 class="title">Fragrances</h1>
+      <div class="search-wrapper">
+        <input type="text" id="search-bar" placeholder="Search by name..." />
+        </div>
+        <div class="footer">
+          <button Id="for-male">Male Fragrances</button>
+          <button Id="for-female">Female Fragrances</button>
+        </div>
     </header>
-    <div id="card-container"></div> // pointer to the JS file card-containers
-    <div class="card" style="display: none"> // structure of the copied card
-      <div class="card-content"> // how the images are formatted
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul> // unlisted bullet points for the structure
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+    <div id="card-container"></div>
+    <div class="card" style="display: none">
+      <div class="card-content">
+        <h2>Cologne Title</h2>
+        <img src="" alt="Cologne Image" />
+        <p class="card-price"> </p>
+        <p class="scent-title"> </p>
+        <ol class="scents"> 
+        </ol>
       </div>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button> // button that calls that specific function
-      <button onclick="removeLastCard()">Remove A Card!</button> // button that calls that specific function
     </div>
   </body>
 </html>
